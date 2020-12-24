@@ -1,5 +1,10 @@
-/**
- * Created by Yaron Muzikant on 13-Mar-17.
- */
 import { NativeModules } from 'react-native';
-module.exports = NativeModules.NetworkScanner;
+const { RNNetworkScanner } = NativeModules.NetworkScanner;
+
+const NetworkScanner = {
+	scan() {
+		RNNetworkScanner.scan();
+	}
+}
+
+module.exports = NetworkScanner;
